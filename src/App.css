@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#root {
+    max-width: 1000px;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+header input {
+    padding : 0.5rem 1rem;
+    background-color: #000000;
+    border: none;
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+    color: #ffffff;
+    transition: 0.4s;
+}
+
+
+
+input:focus {
+    outline: 2px solid #000000;
+    background: #ffffff;
+    color: #000000;
+}
+
+
+.movieArray {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}
+.movie {
+    max-width: 8rem;
+    height: 300px;
+}
+.movie .card {
+    position: relative;
+}
+.movie .card img {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+.movie .card p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    line-clamp: 5;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+
+    display: -webkit-box;
+    padding: 0.2rem 0.4rem;
+    color: #fff;
+    background-color: #000000;
+    border-radius: 0.5rem;
+    font-size: 14px;
+}
+.cp {
+    display: none;
+}
+
+.movie .card:hover .cp {
+    display: block;
+}
+
+.movie h2 {
+    font-size: 15px;
+    color: #000000;
+
+    display: -webkit-box;
+    line-clamp: 1;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+.movie h4 {
+    background-color: #000000;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
